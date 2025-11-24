@@ -63,6 +63,7 @@ button[aria-label="Close"] {
   transition: background 0.3s !important;
 }
 
+
 .wallet-adapter-modal-button-close:hover,
 button[data-testid="wallet-modal-close"]:hover,
 .modal-close:hover,

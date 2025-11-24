@@ -42,6 +42,8 @@ export const Wallet = () => {
         [network]
     );
 
+    
+
     return (
         <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={wallets} autoConnect>
