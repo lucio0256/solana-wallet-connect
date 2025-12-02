@@ -1,72 +1,42 @@
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.wallet-container {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  max-width: 400px;
-  width: 100%;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-button {
-  background: #00d1b2;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
-  margin-top: 1rem;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-button:hover:not(:disabled) {
-  background: #00b090;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 209, 178, 0.4);
+.card {
+  padding: 2em;
 }
 
-button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-/* Override wallet adapter modal close button */
-.wallet-adapter-modal-button-close,
-button[data-testid="wallet-modal-close"],
-.modal-close,
-button[aria-label="Close"] {
-  background: #333 !important;
-  border: 1px solid #555 !important;
-  color: white !important;
-  border-radius: 4px !important;
-  padding: 4px 8px !important;
-  cursor: pointer !important;
-  transition: background 0.3s !important;
-}
-
-
-.wallet-adapter-modal-button-close:hover,
-button[data-testid="wallet-modal-close"]:hover,
-.modal-close:hover,
-button[aria-label="Close"]:hover {
-  background: #555 !important;
+.read-the-docs {
+  color: #888;
 }
